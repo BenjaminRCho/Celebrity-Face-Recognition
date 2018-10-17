@@ -69,7 +69,7 @@ Here are the loss and accuracy curves of my model:
 ![Loss Curve](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img4.png)
 ![Accuracy Curve](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img5.png)
 
-Although my model had such high accuracy, it still makes a few false predictions with the test images that weren't included in training set. When I run the model through a webcam script to make real time predictions, it accurately predicts the faces most of the time but it can still be more precise. I have tried fine tuning my model parameters multiple times but it still seems to be overfitting. One way to solve this would be to gather at least double the amount of data I currently have, if not more, to make it more accurate.
+My model had such high accuracy, yet it still made a few false predictions with the test images that weren't included in training set, which suggests overfitting. When I run the model through a webcam script to make real time predictions, it accurately predicts the faces most of the time but it can still be more precise. I have tried fine tuning my model parameters multiple times but it still seems to be learning some face's features better than others. One way to solve this would be to gather at least double the amount of data I currently have, if not more, to make the predictions more accurate. Otherwise, I would just need to keep improving my model and its parameters. 
 
 Predictions on test images:
 ![Predictions](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img6.png)
