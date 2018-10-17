@@ -44,6 +44,7 @@ Dataset collected from: https://github.com/prateekmehta59/Celebrity-Face-Recogni
 Originially I decided to include ten celebrities in my model, however, I decided to work with a smaller dataset first with five celebrities plus myself and a friend. Once I have a working model, then more people will be added. 
 
 I labeled my image folders a certain way so that I can use the class name and class label for my predictions. This is how I set up my data folders:
+
 ![Data Folder Outline](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img7.png)
 
 First of all, my required dataset has to have as many frontal face images of the five celebrities that I am trying to predict. The initial approach after gathering the data is to make sure that there is only one face in each image, this way we can assure that OpenCV’s face detector will capture the face we want. This means that the images have to be clean with the correct celebrity face and with no other noise (i.e. any other face) in them.
