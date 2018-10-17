@@ -66,6 +66,7 @@ Just like any other model, there are a few parameters to tweak around with so th
 All in all, after training the model I was able to obtain an accuracy score of 98%. Although the dataset only includes images of seven people, the model should run successfully for other people so long as there is enough data to be trained on. 
 
 Here are the loss and accuracy curves of my model:
+
 ![Loss Curve](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img4.png)
 ![Accuracy Curve](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img5.png)
 
