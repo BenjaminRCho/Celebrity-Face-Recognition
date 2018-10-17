@@ -44,16 +44,16 @@ Dataset collected from: https://github.com/prateekmehta59/Celebrity-Face-Recogni
 Originially I decided to include ten celebrities in my model, however, I decided to work with a smaller dataset first with five celebrities plus myself and a friend. Once I have a working model, then more people will be added. 
 
 I labeled my image folders a certain way so that I can use the class name and class label for my predictions. This is how I set up my data folders:
-![Data Folder Outline](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/tree/master/6_visuals/img7.png)
+![Data Folder Outline](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img7.png)
 
 First of all, my required dataset has to have as many frontal face images of the five celebrities that I am trying to predict. The initial approach after gathering the data is to make sure that there is only one face in each image, this way we can assure that OpenCV’s face detector will capture the face we want. This means that the images have to be clean with the correct celebrity face and with no other noise (i.e. any other face) in them.
 
 Here are some examples of images that are considered messy data:
-![Messy Data](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/tree/master/6_visuals/img1.png)
+![Messy Data](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img1.png)
 
 After cleaning all the images in my dataset, I plotted to view them in a single color channel and to look at just linear features in the images. 
-![Green Color Channel Only](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/tree/master/6_visuals/img2.png)
-![Linear Features Only](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/tree/master/6_visuals/img3.png)
+![Green Color Channel Only](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img2.png)
+![Linear Features Only](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img3.png)
 
 The next step was to use OpenCV because it has a prebuilt face detector that will help in cropping each of the faces. I would like to use the Dlib library to capture the facial landmarks myself in the future, however, for the sake of time I used OpenCV’s face cascades. The face detector required some fine tuning to find the optimal setting because sometimes it would capture locations on the image that didn't have a face. Now, I had to resize the cropped images to the width and height of my choice (175 by 175) so that all the data dimensions will be the same because all my images were different sizes. This is important for feeding the data into my model otherwise it won't train. Once the faces are cropped, resized and saved, my dataset was complete at this point and ready to be separated into my X (i.e. image arrays) and y (i.e. image labels). 
 
@@ -66,13 +66,13 @@ Just like any other model, there are a few parameters to tweak around with so th
 All in all, after training the model I was able to obtain an accuracy score of 98%. Although the dataset only includes images of seven people, the model should run successfully for other people so long as there is enough data to be trained on. 
 
 Here are the loss and accuracy curves of my model:
-![Loss Curve](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/tree/master/6_visuals/img4.png)
-![Accuracy Curve](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/tree/master/6_visuals/img5.png)
+![Loss Curve](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img4.png)
+![Accuracy Curve](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img5.png)
 
 Although my model had such high accuracy, it still makes a few false predictions with the test images that weren't included in training set. When I run the model through a webcam script to make real time predictions, it accurately predicts the faces most of the time but it can still be more precise. I have tried fine tuning my model parameters multiple times but it still seems to be overfitting. One way to solve this would be to gather at least double the amount of data I currently have, if not more, to make it more accurate.
 
 Predictions on test images:
-![Predictions](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/tree/master/6_visuals/img6.png)
+![Predictions](https://github.com/BenjaminRCho/Celebrity-Face-Recognition/blob/master/6_visuals/img6.png)
 
 When I added more people to the model, the performance dropped dramatically. This furthers my belief that there needs to be a substantial amount of face images so that the model can better learn the unique features of each individual. I really learned that the more clean data you have the better a face recognition model will perform. Thus, in order to implement such model in the real world, we would need to continuously feed the model with more and more images for better classification.
 
