@@ -1,0 +1,15 @@
+
+To upload a single file from local to aws folder at root dir:
+scp -i ~/keras.pem  test.py ubuntu@ec2-54-202-97-95.us-west-2.compute.amazonaws.com:project
+
+To download a single file from aws folder to local:
+scp -i ~/keras.pem ubuntu@ec2-54-202-97-95.us-west-2.compute.amazonaws.com:project .
+
+To upload folder with content inside:
+scp -r /path/local_dir ubuntu@ec2-54-202-97-95.us-west-2.compute.amazonaws.com:project
+
+To download folder with content from aws to local
+scp -r ubuntu@ec2-54-202-97-95.us-west-2.compute.amazonaws.com:project .
+
+To install opencv in jupyter notebook on aws
+conda install -c menpo opencv=3
